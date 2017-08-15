@@ -18,8 +18,7 @@ int main()
     int in=0;
     freopen("transition_small.txt","w",stdout);
     setlocale(LC_CTYPE,"it_IT.UTF-8");
-
-    if ((input = fopen("temp33.txt","r")) == NULL)
+    if ((input = fopen("input.txt","r")) == NULL)
         return 1;;;
     int fl=0;
     string st;
@@ -29,11 +28,6 @@ int main()
 
         wstring ws(buf);
         string str(ws.begin(), ws.end());
-
-
-
-
-
          string st = "",tag="";
         int flag=0,valid=0,IN=0;
         char nm[10000],nm2[200];
@@ -50,22 +44,19 @@ int main()
         S.insert(nm2);
 
     }
-
-
-
     fclose(input);
-    cout<<S.size()<<endl;
+   // cout<<S.size()<<endl;
     int transision_mat[20][5000];
     memset(transision_mat,0,sizeof transision_mat);
     for(set<string>:: iterator it = S.begin(); it != S.end(); it++)
     {
         mp[*it] = in++;
-        cout<<"\'"<<*it<<"\' ,";
+       // cout<<"\'"<<*it<<"\' ,";
 
 
     }
     puts("");
-    if ((input = fopen("temp33.txt","r")) == NULL)
+    if ((input = fopen("input.txt","r")) == NULL)
         return 1;
     int prev = -1;
     while (fgetws(buf,1000,input)!=NULL)

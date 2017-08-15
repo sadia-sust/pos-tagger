@@ -19,7 +19,7 @@ int main()
     freopen("emission_smalldd.txt","w",stdout);
     setlocale(LC_CTYPE,"it_IT.UTF-8");
 
-    if ((input = fopen("temp33.txt","r")) == NULL)
+    if ((input = fopen("input.txt","r")) == NULL)
         return 1;;;
     int fl=0;
     string st;
@@ -52,7 +52,7 @@ int main()
 
 
     fclose(input);
-    cout<<S.size()<<endl;
+ //   cout<<S.size()<<endl; //uncomment it to know the unique workd count
     int transision_mat[20][5000];
     memset(transision_mat,0,sizeof transision_mat);
     for(set<string>:: iterator it = S.begin(); it != S.end(); it++)
@@ -63,7 +63,7 @@ int main()
 
     }
     puts("");
-    if ((input = fopen("temp33.txt","r")) == NULL)
+    if ((input = fopen("input.txt","r")) == NULL)
         return 1;
     while (fgetws(buf,1000,input)!=NULL)
     {
